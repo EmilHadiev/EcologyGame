@@ -8,6 +8,12 @@ public class MenuInstaller : MonoInstaller
     public override void InstallBindings()
     {
         BindMenuStateMachine();
+        BindQuestionSelector();
+    }
+
+    private void BindQuestionSelector()
+    {
+        Container.BindInterfacesAndSelfTo<QuestionSelector>().AsSingle();
     }
 
     private void BindMenuStateMachine()
