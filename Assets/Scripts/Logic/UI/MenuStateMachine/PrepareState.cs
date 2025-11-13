@@ -14,19 +14,18 @@ public class PrepareState : Menu
     [Inject] private IQuestionSelector _selector;
 
     private CancellationTokenSource _cts;
+    private const string Question = "Вопрос";
 
-    public override void Show()
+    public override void Enter()
     {
-        base.Show();
+        base.Enter();
         ShowAnswerNumber();
         HideAfterDelay().Forget();
     }
 
     private void ShowAnswerNumber()
     {
-        string text = _prepareText.text;
-        text += $" {_selector.CurrentAnswerNumber}";
-        _prepareText.text = text;
+        _prepareText.text = $"{Question} {_selector.CurrentAnswerNumber}";
     }
 
     private async UniTaskVoid HideAfterDelay()

@@ -2,6 +2,6 @@ using UnityEngine;
 
 public abstract class Menu : MonoBehaviour
 {
-    public void Hide() => gameObject.SetActive(false);
-    public virtual void Show() => gameObject.SetActive(true);
+    public void Exit() => gameObject.SetActive(false);
+    public virtual void Enter() => gameObject.SetActive(true);
 }

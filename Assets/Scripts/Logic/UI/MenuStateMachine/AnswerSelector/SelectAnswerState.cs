@@ -10,9 +10,9 @@ public class SelectAnswerState : Menu
         _render ??= GetComponent<SelectAnswerRender>();
     }
 
-    public override void Show()
+    public override void Enter()
     {
-        base.Show();
+        base.Enter();
         _render.Show();
     }
 }

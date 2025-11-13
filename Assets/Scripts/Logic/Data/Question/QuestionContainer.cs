@@ -6,5 +6,5 @@ public class QuestionContainer : ScriptableObject
 {
     [SerializeField] private Question[] _questions;
 
-    public IReadOnlyCollection<Question> Questions => _questions;
+    public IReadOnlyCollection<Question> GetQuestions() => _questions;
 }

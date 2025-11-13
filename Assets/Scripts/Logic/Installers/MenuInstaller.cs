@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +10,12 @@ public class MenuInstaller : MonoInstaller
     {
         BindMenuStateMachine();
         BindQuestionSelector();
+        BindPointsContainer();
+    }
+
+    private void BindPointsContainer()
+    {
+        Container.BindInterfacesAndSelfTo<PointsContainer>().AsSingle();
     }
 
     private void BindQuestionSelector()

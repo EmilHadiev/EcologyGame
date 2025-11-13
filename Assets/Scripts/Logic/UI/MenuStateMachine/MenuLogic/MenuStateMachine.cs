@@ -20,9 +20,9 @@ public class MenuStateMachine : MonoBehaviour, IMenuStateMachine
         foreach (var menu in _menus)
         {
             if (menu is T)
-                menu.Show();
+                menu.Enter();
             else
-                menu.Hide();
+                menu.Exit();
         }
     }
 }

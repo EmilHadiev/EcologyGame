@@ -4,13 +4,15 @@ using Zenject;
 public class QuestionSelector : IInitializable, IQuestionSelector
 {
     public int CurrentAnswerNumber => _index + 1;
+    public int MaxQuestions => _questions.Length;
+
     private int _index;
     private Question[] _questions;
 
     [Inject]
     private void Constructor(QuestionContainer questionContainer)
     {
-        _questions = questionContainer.Questions.ToArray();
+        _questions = questionContainer.GetQuestions().ToArray();
     }
 
     public void Initialize()
