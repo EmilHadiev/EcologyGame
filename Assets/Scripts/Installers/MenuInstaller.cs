@@ -5,22 +5,29 @@ using Zenject;
 public class MenuInstaller : MonoInstaller
 {
     [SerializeField] private MenuStateMachine _menuStateMachine;
+    [SerializeField] private SoundContainer _soundContainer;
 
     public override void InstallBindings()
     {
         BindMenuStateMachine();
         BindQuestionSelector();
         BindPointsContainer();
+        BindSoundContainer();
+    }
+
+    private void BindSoundContainer()
+    {
+        Container.BindInterfacesTo<SoundContainer>().FromComponentInNewPrefab(_soundContainer).AsSingle();
     }
 
     private void BindPointsContainer()
     {
-        Container.BindInterfacesAndSelfTo<PointsContainer>().AsSingle();
+        Container.BindInterfacesTo<PointsContainer>().AsSingle();
     }
 
     private void BindQuestionSelector()
     {
-        Container.BindInterfacesAndSelfTo<QuestionSelector>().AsSingle();
+        Container.BindInterfacesTo<QuestionSelector>().AsSingle();
     }
 
     private void BindMenuStateMachine()

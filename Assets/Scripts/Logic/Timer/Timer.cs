@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using System;
 using System.Threading;
 using UnityEngine;
@@ -9,11 +10,12 @@ public class Timer : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private int _time = 30;
 
-    public event Action TimerEnded;
+    private const float AnimationDuration = 0.95f;
 
     private int _timeChache;
-
     private CancellationTokenSource _cts;
+
+    public event Action TimerEnded;
 
     private void OnValidate()
     {
@@ -31,6 +33,11 @@ public class Timer : MonoBehaviour
         _slider.value = 1;
         _timeChache = _time;
 
+        CountPerformer();
+    }
+
+    private void CountPerformer()
+    {
         CloseToken();
         _cts = new CancellationTokenSource();
         StartCount(_cts).Forget();
@@ -62,9 +69,9 @@ public class Timer : MonoBehaviour
 
     private void CalculateValue()
     {
-        //добавить сюла dotween!
         _timeChache -= 1;
-        _slider.value = Convert.ToSingle(_timeChache) / _time;
+        var endValue = Convert.ToSingle(_timeChache) / _time;
+        _slider.DOValue(endValue, AnimationDuration);
     }
 
     private void CloseToken() => _cts?.Cancel();
