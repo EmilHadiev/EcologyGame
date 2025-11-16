@@ -3,6 +3,8 @@
     int CurrentAnswerNumber { get; }
     int MaxQuestions { get; }
 
-    Question GetAnswer();
+    QuestVersion SelectedWrongAnswer { get; set; }
+
+    Question GetQuestion();
     void PrepareNextQuestion();
 }

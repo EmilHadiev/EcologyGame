@@ -6,6 +6,8 @@ public class QuestionSelector : IInitializable, IQuestionSelector
     public int CurrentAnswerNumber => _index + 1;
     public int MaxQuestions => _questions.Length;
 
+    public QuestVersion SelectedWrongAnswer { get; set; }
+
     private int _index;
     private Question[] _questions;
 
@@ -20,7 +22,7 @@ public class QuestionSelector : IInitializable, IQuestionSelector
         _index = 0;
     }
 
-    public Question GetAnswer()
+    public Question GetQuestion()
     {
         if (_index > _questions.Length - 1)
             _index = 0;

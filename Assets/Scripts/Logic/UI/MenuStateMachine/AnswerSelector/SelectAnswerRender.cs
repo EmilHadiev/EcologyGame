@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -15,18 +14,14 @@ public class SelectAnswerRender : MonoBehaviour
 
     private IQuestionSelector _questionSelector;
     private IMenuStateMachine _stateMachine;
-    private IPointsContainer _points;
-    private ISoundContainer _sound;
 
     private int _countQuestions;
 
     [Inject]
-    private void Constructor(IQuestionSelector selector, IMenuStateMachine menuStateMachine, IPointsContainer points, ISoundContainer soundContainer)
+    private void Constructor(IQuestionSelector selector, IMenuStateMachine stateMachine)
     {
         _questionSelector = selector;
-        _stateMachine = menuStateMachine;
-        _points = points;
-        _sound = soundContainer;
+        _stateMachine = stateMachine;
     }
 
     private const int MaxAnswers = 4;
@@ -55,13 +50,13 @@ public class SelectAnswerRender : MonoBehaviour
     {
         _timer.StartTimer();
 
-        _questionTitleText.text = _questionSelector.GetAnswer().Title;
+        _questionTitleText.text = _questionSelector.GetQuestion().Title;
 
         var shuffler = new ArrayShuffler();       
-        var selector = shuffler.Shuffle(_questionSelector.GetAnswer().QuestVersions).ToArray();
+        var selector = shuffler.Shuffle(_questionSelector.GetQuestion().QuestVersions).ToArray();
 
         for (int i = 0; i < selector.Length; i++)
-            _selectors[i].SetQuestion(selector[i]);
+            _selectors[i].SetQuestion(selector[i], _questionSelector);
 
         ShowCountQuestions(_questionSelector.CurrentAnswerNumber, _questionSelector.MaxQuestions);
     }
@@ -88,18 +83,8 @@ public class SelectAnswerRender : MonoBehaviour
     {
         Debug.Log(isCorrect);
         LockAnswers();
-        TryAddPoints(isCorrect);
-        PlaySound(isCorrect);
         StopTimer();
-        PrepareNextQuestion();
-    }
-
-    private void PlaySound(bool isCorrect)
-    {
-        if (isCorrect)
-            _sound.Play(SoundsName.CorrectAnswer);
-        else
-            _sound.Play(SoundsName.WrongAnswer);
+        ShowResult(isCorrect);
     }
 
     private void LockAnswers()
@@ -108,20 +93,16 @@ public class SelectAnswerRender : MonoBehaviour
             _selectors[i].Lock();
     }
 
-    private void TryAddPoints(bool isCorrect)
-    {
-        if (isCorrect)
-            _points.AddPoints();
-    }
-
     private void StopTimer()
     {
         _timer.StopTimer();
     }
 
-    private void PrepareNextQuestion()
+    private void ShowResult(bool isCorrect)
     {
-        _questionSelector.PrepareNextQuestion();
-        _stateMachine.SwitchState<PrepareState>();
+        if (isCorrect)
+            _stateMachine.SwitchState<CorrectAnswerState>();
+        else
+            _stateMachine.SwitchState<WrongAnswerState>();
     }
 }
