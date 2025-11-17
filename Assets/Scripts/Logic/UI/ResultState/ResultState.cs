@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,8 +45,14 @@ public class ResultState : Menu
 
     private void ShowResult()
     {
-        _countAnswersText.text = $"{_pointsContainer.Points}/{_selector.MaxQuestions}";
+        _countAnswersText.text = $"{GetCorrectPoints()}/{_selector.MaxQuestions}";
         _answerResultText.text = GetResultText();
+    }
+
+    private int GetCorrectPoints()
+    {
+        int additionalPoint = 1;
+        return _pointsContainer.Points + additionalPoint;
     }
 
     private string GetResultText()
@@ -57,11 +62,11 @@ public class ResultState : Menu
 
         if (points >= maxPoints)
             return "Отлично!";
-        else if (maxPoints - 3 == maxPoints)
+        else if (maxPoints - 3 <= maxPoints)
             return "Молодец!";
-        else if (maxPoints - 6 == maxPoints)
+        else if (maxPoints - 6 <= maxPoints)
             return "Хорошо!";
-        else if (maxPoints - 9 == maxPoints)
+        else if (maxPoints - 9 <= maxPoints)
             return "Неплохо!";
         else
             return "Старайся лучше!";

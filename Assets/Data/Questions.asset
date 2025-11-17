@@ -65,107 +65,107 @@ MonoBehaviour:
     _questVersions:
     - IsCorrect: 1
       Description: "\u041A\u0435\u043D\u0433\u0443\u0440\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: d3467e58b12d45844a6f699927c6c147, type: 3}
     - IsCorrect: 0
       Description: "\u0417\u0430\u044F\u0446"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: ed6f7eea7dfae7b479b2a13c7e312138, type: 3}
     - IsCorrect: 0
       Description: "\u041A\u043E\u0440\u043E\u0432\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: f6fa53e1b51e26c47b5a2f9dd3d57590, type: 3}
     - IsCorrect: 0
       Description: "\u041A\u043E\u0442"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2a9dc1c0bc67c2341a61faf7031a2dd2, type: 3}
   - Title: "\u041A\u0430\u043A\u043E\u0439 \u0446\u0432\u0435\u0442\u043E\u043A \u043B\u0435\u0442\u043E
       \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u041A\u043E\u043B\u043E\u043A\u043E\u043B\u044C\u0447\u0438\u043A"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: a0d32b62d159e0341a6b628a86858781, type: 3}
     - IsCorrect: 0
       Description: "\u0420\u043E\u043C\u0430\u0448\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c0ae22d9ad8e53746b4132209208a550, type: 3}
     - IsCorrect: 0
       Description: "\u0425\u0440\u0438\u0437\u0430\u043D\u0442\u0435\u043C\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: f969d49bd9b31504a9452ffc79c895a7, type: 3}
     - IsCorrect: 0
       Description: "\u0413\u0432\u043E\u0437\u0434\u0438\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2080458f1cdb4334badf0999a27fa8b7, type: 3}
   - Title: "\u041A\u0430\u043A\u043E\u0435 \u0434\u0435\u0440\u0435\u0432\u043E,
       \u043A\u0430\u043A \u0438 \u0431\u0435\u0440\u0435\u0437\u0430, \u0434\u0430\u0435\u0442
       \u0441\u043B\u0430\u0434\u043A\u0438\u0439 \u0441\u043E\u043A?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u041A\u043B\u0435\u043D"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c3c7e63c07b6d764ba00a588d10c62c9, type: 3}
     - IsCorrect: 0
       Description: "\u0414\u0443\u0431"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 158be34bd876adf4e81e5231c1de5f29, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u043E\u0441\u043D\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 73edd0218c34cf646a6e1a2bdb9d019a, type: 3}
     - IsCorrect: 0
       Description: "\u0418\u0432\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 8661ec55ab498834f9c2e6ed3dd95e7f, type: 3}
   - Title: "\u0415\u0433\u043E \u043D\u0430\u0437\u044B\u0432\u0430\u044E\u0442 \u0438\u043D\u0436\u0435\u043D\u0435\u0440\u043E\u043C
       - \xAB\u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u0435\u043C\xBB \u043D\u0430
       \u0440\u0435\u043A\u0435"
     _questVersions:
     - IsCorrect: 1
       Description: "\u0411\u043E\u0431\u0435\u0440"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: f3a5261bdadc8c44491c836e64e96abd, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u0442\u0440\u0430\u0443\u0441"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 30f6a64f9d50a4c45a2b7ddc284ea37f, type: 3}
     - IsCorrect: 0
       Description: "\u0426\u0430\u043F\u043B\u044F"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 88b0df13ad6c23042b35b762f6ec7401, type: 3}
     - IsCorrect: 0
       Description: "\u0413\u043E\u043B\u0443\u0431\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 7aa17f9651a340d4caa9e052c75399a9, type: 3}
   - Title: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0432\u0438\u0434 \u0431\u0430\u0431\u043E\u0447\u0435\u043A?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u041C\u0430\u0445\u0430\u043E\u043D"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 4bd64851e6dbc7740ab9c0b3cb653aff, type: 3}
     - IsCorrect: 0
       Description: "\u0411\u0435\u043B\u044F\u043D\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: d8152ed48f53e9046bc46176149713a6, type: 3}
     - IsCorrect: 0
       Description: "\u041A\u0430\u043F\u0443\u0441\u0442\u043D\u0438\u0446\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 21e71b91ebcd5d74ba1fc8eae6c5e7d6, type: 3}
     - IsCorrect: 0
       Description: "\u0416\u0435\u043B\u0442\u0443\u0448\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 943a1a30c4a42c949a1ee20852dac13b, type: 3}
   - Title: "\u041A\u043E\u0433\u043E \u0438\u0437 \u043F\u0442\u0438\u0446 \u043D\u0430\u0437\u044B\u0432\u0430\u044E\u0442
       \u0441\u0430\u043D\u0438\u0442\u0430\u0440\u043E\u043C \u043B\u0435\u0441\u0430?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u0414\u044F\u0442\u0435\u043B"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: f0330da43f35e5c41a97235cbd2dd83c, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u043E\u0440\u043E\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: ee5b61bbcb5a905499dc97ce889007a5, type: 3}
     - IsCorrect: 0
       Description: "\u0413\u043E\u043B\u0443\u0431\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 7aa17f9651a340d4caa9e052c75399a9, type: 3}
     - IsCorrect: 0
       Description: "\u041B\u0430\u0441\u0442\u043E\u0447\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c01aec6d52862ae4495bb2d92e5ec3d0, type: 3}
   - Title: "\u041A\u043E\u0433\u043E \u043D\u0430\u0437\u044B\u0432\u0430\u044E\u0442
       \xAB\u0446\u0430\u0440\u044C \u0437\u0432\u0435\u0440\u0435\u0439\xBB?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u041B\u0435\u0432"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: e3310ac8e34e99a4cb877e54b7537845, type: 3}
     - IsCorrect: 0
       Description: "\u0412\u043E\u043B\u043A"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2890f6f1e3cffd846b4e1297b37552e0, type: 3}
     - IsCorrect: 0
       Description: "\u041C\u0435\u0434\u0432\u0435\u0434\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 582b35fe6e0daeb47ba6f73df7d00d58, type: 3}
     - IsCorrect: 0
       Description: "\u041B\u0438\u0441\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 42e763945ab0b744381b68c954f610b3, type: 3}
   - Title: "\u0427\u0442\u043E \u0437\u043D\u0430\u0447\u0438\u0442, \u0435\u0441\u043B\u0438
       \u043D\u0430 \u043F\u0443\u0442\u0438 \u0432\u0430\u043C \u0432\u0441\u0435
       \u0447\u0430\u0449\u0435 \u0441\u0442\u0430\u043B \u043F\u043E\u043F\u0430\u0434\u0430\u0442\u044C\u0441\u044F
@@ -174,79 +174,79 @@ MonoBehaviour:
     - IsCorrect: 1
       Description: "\u0417\u043D\u0430\u0447\u0438\u0442, \u0433\u0434\u0435-\u0442\u043E
         \u0440\u044F\u0434\u043E\u043C \u0435\u0441\u0442\u044C \u0442\u0440\u043E\u043F\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 0eefddfef6a152a46bc3767fec981582, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u043A\u043E\u0440\u043E \u043A\u043E\u0433\u043E-\u0442\u043E
         \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u0448\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 85a7ae557f728b6469e4f2d7c9ffd311, type: 3}
     - IsCorrect: 0
       Description: "\u0417\u043D\u0430\u0447\u0438\u0442 \u043D\u0443\u0436\u043D\u043E
         \u043F\u043E\u0439\u0442\u0438 \u0432 \u0434\u0440\u0443\u0433\u0443\u044E
         \u0441\u0442\u043E\u0440\u043E\u043D\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 56de06805ef7d61418b95560f01c9db1, type: 3}
     - IsCorrect: 0
       Description: "\u0417\u043D\u0430\u0447\u0438\u0442 \u0441\u043A\u043E\u0440\u043E
         \u043F\u043E\u0439\u0434\u0435\u0442 \u0434\u043E\u0436\u0434\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c6f56db57c111354098a8fb951dc1461, type: 3}
   - Title: "\u0415\u0451 \u043D\u0430\u0437\u044B\u0432\u0430\u044E\u0442 \xAB\u043F\u0442\u0438\u0446\u0430-\u0433\u0430\u0434\u0430\u043B\u043A\u0430\xBB"
     _questVersions:
     - IsCorrect: 1
       Description: "\u041A\u0443\u043A\u0443\u0448\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 5f1913ee6ab8b0247933acb4fedaee4f, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u043E\u0440\u043E\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 27d5fc9ec0e35be4f9f7ab92654e6ff6, type: 3}
     - IsCorrect: 0
       Description: "\u0413\u0440\u0430\u0447"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 301f57e551fafaf42908040b1bfd87b0, type: 3}
     - IsCorrect: 0
       Description: "\u0410\u0438\u0441\u0442"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2e5479cea4de9cc42b5a925ec619564b, type: 3}
   - Title: "\u0418\u0437 \u043A\u0430\u043A\u043E\u0433\u043E \u0434\u0435\u0440\u0435\u0432\u0430
       \u0434\u0435\u043B\u0430\u044E\u0442 \u0441\u043F\u0438\u0447\u043A\u0438?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u0418\u0437 \u043E\u0441\u0438\u043D\u044B"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: d7d52ba0d4d84dc469b2d01577b275a0, type: 3}
     - IsCorrect: 0
       Description: "\u0418\u0437 \u0434\u0443\u0431\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 158be34bd876adf4e81e5231c1de5f29, type: 3}
     - IsCorrect: 0
       Description: "\u0418\u0437 \u0431\u0435\u0440\u0435\u0437\u044B"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: dcfd218bcfc864946ad626c0dbcfaddf, type: 3}
     - IsCorrect: 0
       Description: "\u0418\u0437 \u043A\u0430\u0448\u0442\u0430\u043D\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: ea7d2377b262b2c41b0e521259429950, type: 3}
   - Title: "\u041A\u0430\u043A\u0430\u044F \u043F\u0442\u0438\u0446\u0430 \u043A\u0440\u0443\u0433\u043B\u044B\u0439
       \u0433\u043E\u0434 \u0445\u043E\u0434\u0438\u0442 \u0432\u043E \u0444\u0440\u0430\u043A\u0435?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u041F\u0438\u043D\u0433\u0432\u0438\u043D"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: af74ff1bd0236a447bbf1b4fbe8a24ce, type: 3}
     - IsCorrect: 0
       Description: "\u0412\u043E\u0440\u043E\u043D\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 9655547d5f731154fb001cd6aacf4012, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u043E\u043B\u043E\u0432\u0435\u0439"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2db1442915a98df4794d04c7444a7cf9, type: 3}
     - IsCorrect: 0
       Description: "\u0414\u0440\u043E\u0437\u0434"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 742191394e21de640abb4819b0b70341, type: 3}
   - Title: "\u0421\u0430\u043C\u044B\u0439 \u0447\u0438\u0441\u0442\u043E\u043F\u043B\u043E\u0442\u043D\u044B\u0439
       \u0437\u0432\u0435\u0440\u0435\u043A?"
     _questVersions:
     - IsCorrect: 1
       Description: "\u0411\u0430\u0440\u0441\u0443\u043A"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c505b5bb60ad83c4ab6230cca1818d49, type: 3}
     - IsCorrect: 0
       Description: "\u0415\u043D\u043E\u0442"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 1fbfebd0745f0c0449ae6e353a12cac6, type: 3}
     - IsCorrect: 0
       Description: "\u0411\u043E\u0431\u0435\u0440"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: f3a5261bdadc8c44491c836e64e96abd, type: 3}
     - IsCorrect: 0
       Description: "\u0411\u0443\u0440\u0443\u043D\u0434\u0443\u043A"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 816090e3e92fcea4dba3745e474ac4fd, type: 3}
   - Title: "\u041A\u0430\u043A \u043D\u0430\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F
       \u043C\u0435\u0441\u0442\u043D\u043E\u0441\u0442\u044C, \u0433\u0434\u0435
       \u0436\u0430\u0440\u043A\u043E, \u043D\u0435\u0442 \u0432\u043E\u0434\u044B
@@ -254,16 +254,16 @@ MonoBehaviour:
     _questVersions:
     - IsCorrect: 1
       Description: "\u041F\u0443\u0441\u0442\u044B\u043D\u044F"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: fb01f002acf74d940bf130d157ddc028, type: 3}
     - IsCorrect: 0
       Description: "\u0410\u0444\u0440\u0438\u043A\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 5797dcb9cbd08d94b812a0125d928fd6, type: 3}
     - IsCorrect: 0
       Description: "\u0415\u0432\u0440\u0430\u0437\u0438\u044F"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 7722129cd36792e47af80d7ca1efd767, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u0438\u0431\u0438\u0440\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 1dabfd1f5de9b8e48bf54262e28ed01c, type: 3}
   - Title: "\u0427\u0442\u043E \u043C\u044B \u043C\u043E\u0436\u0435\u043C \u0441\u0434\u0435\u043B\u0430\u0442\u044C
       \u0441\u043E \u0441\u0442\u0430\u0440\u043E\u0439 \u0433\u0430\u0437\u0435\u0442\u043E\u0439,
       \u0436\u0443\u0440\u043D\u0430\u043B\u043E\u043C \u0438\u043B\u0438 \u043A\u0430\u0440\u0442\u043E\u043D\u043D\u043E\u0439
@@ -274,18 +274,18 @@ MonoBehaviour:
       Description: "\u0421\u0434\u0430\u0442\u044C \u043D\u0430 \u043F\u0435\u0440\u0435\u0440\u0430\u0431\u043E\u0442\u043A\u0443
         \u0438\u043B\u0438 \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u0438\u0437
         \u043D\u0438\u0445 \u043F\u043E\u0434\u0435\u043B\u043A\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 62c719e9e440f7c49b609b2c1c5b0899, type: 3}
     - IsCorrect: 0
       Description: "\u0417\u0430\u043A\u043E\u043F\u0430\u0442\u044C \u0432 \u043B\u0435\u0441\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: ce8772c0646606d4d92778ec65e67189, type: 3}
     - IsCorrect: 0
       Description: "\u0412\u044B\u0431\u0440\u043E\u0441\u0438\u0442\u044C \u0432
         \u043E\u043A\u043D\u043E"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 4c9e2c3444253a54b8f9c8ad7e9b847f, type: 3}
     - IsCorrect: 0
       Description: "\u0420\u0430\u0437\u043E\u0440\u0432\u0430\u0442\u044C \u0438
         \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043D\u0430 \u043F\u043E\u043B\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2217dd98b500f7c41bc8e1cff43846b6, type: 3}
   - Title: "\u041A\u0430\u043A\u043E\u0439 \u0432\u0438\u0434 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u0430
       \u0441\u0430\u043C\u044B\u0439 \u043F\u043E\u043B\u0435\u0437\u043D\u044B\u0439
       \u0434\u043B\u044F \u0447\u0438\u0441\u0442\u043E\u0442\u044B \u0432\u043E\u0437\u0434\u0443\u0445\u0430,
@@ -294,17 +294,16 @@ MonoBehaviour:
     - IsCorrect: 1
       Description: "\u0412\u0435\u043B\u043E\u0441\u0438\u043F\u0435\u0434 \u0438\u043B\u0438
         \u0441\u0430\u043C\u043E\u043A\u0430\u0442"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: af4a17f06da0e1f429d43f6f5724ece8, type: 3}
     - IsCorrect: 0
       Description: "\u0420\u0430\u043A\u0435\u0442\u0430"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 640077b55b125d044b53b844d81576b1, type: 3}
     - IsCorrect: 0
-      Description: "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u0434\u044B\u043C\u043D\u044B\u0439
-        \u0433\u0440\u0443\u0437\u043E\u0432\u0438\u043A"
-      Sprite: {fileID: 0}
+      Description: "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A"
+      Sprite: {fileID: 21300000, guid: d456c948cbd252d4b945f1ea599fcbc9, type: 3}
     - IsCorrect: 0
       Description: "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 0ff139114bf7f554ea5cd0f110f0f30e, type: 3}
   - Title: "\u041A\u0442\u043E \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442 \u043F\u0435\u0440\u0435\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u0442\u044C
       \u043E\u043F\u0430\u0432\u0448\u0438\u0435 \u043B\u0438\u0441\u0442\u044C\u044F
       \u0438 \u0441\u0443\u0445\u0438\u0435 \u0432\u0435\u0442\u043A\u0438 \u0432
@@ -315,16 +314,16 @@ MonoBehaviour:
     - IsCorrect: 1
       Description: "\u0414\u043E\u0436\u0434\u0435\u0432\u044B\u0435 \u0447\u0435\u0440\u0432\u044F\u0447\u043A\u0438
         \u0438 \u0436\u0443\u0447\u043A\u0438"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c6ed48e1294276a46a8e8fd650cda471, type: 3}
     - IsCorrect: 0
       Description: "\u041B\u0451\u0442\u0447\u0438\u043A\u0438"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 6080b11b6d8e47d4992519695094b659, type: 3}
     - IsCorrect: 0
       Description: "\u041A\u043E\u0441\u043C\u043E\u043D\u0430\u0432\u0442\u044B"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 4088dd60736b97246a34793018a5899b, type: 3}
     - IsCorrect: 0
       Description: "\u0421\u043E\u0431\u0430\u043A\u0438"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 8cf450b0a1639d3479549c43098039f0, type: 3}
   - Title: "\u0417\u0430\u0447\u0435\u043C \u043C\u044B \u0441\u0430\u0436\u0430\u0435\u043C
       \u0446\u0432\u0435\u0442\u044B, \u0434\u0435\u0440\u0435\u0432\u044C\u044F
       \u0438 \u043A\u0443\u0441\u0442\u044B?"
@@ -334,19 +333,19 @@ MonoBehaviour:
         \u0442\u0435\u043D\u044C, \u0447\u0438\u0441\u0442\u044B\u0439 \u0432\u043E\u0437\u0434\u0443\u0445
         \u0438 \u0431\u044B\u043B\u0438 \u0434\u043E\u043C\u043E\u043C \u0434\u043B\u044F
         \u043F\u0442\u0438\u0446 \u0438 \u0431\u0430\u0431\u043E\u0447\u0435\u043A"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: eb24a0aad3f3fc94294afb98f011b665, type: 3}
     - IsCorrect: 0
       Description: "\u0427\u0442\u043E\u0431\u044B \u0437\u0438\u043C\u043E\u0439
         \u043E\u043D\u0438 \u0437\u0430\u043C\u0435\u0440\u0437\u0430\u043B\u0438"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 979c892cd5858c1468e9f3acd05a64c6, type: 3}
     - IsCorrect: 0
       Description: "\u0427\u0442\u043E\u0431\u044B \u0431\u044B\u043B\u043E \u0441\u043B\u043E\u0436\u043D\u0435\u0435
         \u0431\u0435\u0433\u0430\u0442\u044C \u043F\u043E \u0434\u0432\u043E\u0440\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 2c66f2a1e3bfab64480c2d68b54d36d1, type: 3}
     - IsCorrect: 0
       Description: "\u0427\u0442\u043E\u0431\u044B \u0438\u0445 \u043F\u043E\u0442\u043E\u043C
         \u043C\u043E\u0436\u043D\u043E \u0431\u044B\u043B\u043E \u0441\u043B\u043E\u043C\u0430\u0442\u044C"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 08beeed59485fc94d989d78433a26e2a, type: 3}
   - Title: "\u041A\u0430\u043A \u043C\u044B \u043C\u043E\u0436\u0435\u043C \u043F\u043E\u043C\u043E\u0447\u044C
       \u043F\u0442\u0438\u0446\u0430\u043C \u0437\u0438\u043C\u043E\u0439, \u043A\u043E\u0433\u0434\u0430
       \u0438\u043C \u0442\u0440\u0443\u0434\u043D\u043E \u043D\u0430\u0439\u0442\u0438
@@ -356,19 +355,18 @@ MonoBehaviour:
       Description: "\u0421\u0434\u0435\u043B\u0430\u0442\u044C \u0438 \u043F\u043E\u0432\u0435\u0441\u0438\u0442\u044C
         \u043D\u0430 \u0434\u0435\u0440\u0435\u0432\u043E \u043A\u043E\u0440\u043C\u0443\u0448\u043A\u0443
         \u0441 \u0437\u0451\u0440\u043D\u0430\u043C\u0438 \u0438 \u0441\u0435\u043C\u0435\u0447\u043A\u0430\u043C\u0438"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: e61b49f0b87cfbb4caa4220c2dea64cd, type: 3}
     - IsCorrect: 0
       Description: "\u0413\u0440\u043E\u043C\u043A\u043E \u043A\u0440\u0438\u0447\u0430\u0442\u044C
         \u043D\u0430 \u043D\u0438\u0445"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: a742ef1e1cc73ea41bed236c4dc8669d, type: 3}
     - IsCorrect: 0
       Description: "\u041F\u043E\u0434\u0430\u0440\u0438\u0442\u044C \u0438\u043C
         \u0442\u0451\u043F\u043B\u044B\u0435 \u0448\u0430\u0440\u0444\u044B"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c3d63cf651a7669479f313ab5c01d90d, type: 3}
     - IsCorrect: 0
-      Description: "\u0412\u0437\u044F\u0442\u044C \u0438\u0445 \u0432\u0441\u0435\u0445
-        \u0436\u0438\u0442\u044C \u043A \u0441\u0435\u0431\u0435 \u0434\u043E\u043C\u043E\u0439"
-      Sprite: {fileID: 0}
+      Description: "\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0434\u0435\u043B\u0430\u0442\u044C"
+      Sprite: {fileID: 21300000, guid: 212376dcb7c6e4f4582a4d78e0bc7b07, type: 3}
   - Title: "\u041A\u0443\u0434\u0430 \u043B\u0443\u0447\u0448\u0435 \u0432\u044B\u0431\u0440\u043E\u0441\u0438\u0442\u044C
       \u0431\u0443\u043C\u0430\u0436\u043A\u0443 \u043E\u0442 \u043A\u043E\u043D\u0444\u0435\u0442\u044B,
       \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0448 \u0434\u0432\u043E\u0440
@@ -376,13 +374,13 @@ MonoBehaviour:
     _questVersions:
     - IsCorrect: 1
       Description: "\u0412 \u0443\u0440\u043D\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 168a1c68b4ae9a944b594097682d110b, type: 3}
     - IsCorrect: 0
       Description: "\u0412 \u043A\u0430\u0440\u043C\u0430\u043D"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 8ec7c9a9a04aa604d95db8f827739cfe, type: 3}
     - IsCorrect: 0
       Description: "\u041D\u0430 \u0442\u0440\u0430\u0432\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: 7379197d437d771479cc901ef249688b, type: 3}
     - IsCorrect: 0
       Description: "\u041F\u043E\u0434 \u0441\u043A\u0430\u043C\u0435\u0439\u043A\u0443"
-      Sprite: {fileID: 0}
+      Sprite: {fileID: 21300000, guid: c0d8c01e08bcd7f4aab969e199d2c27f, type: 3}

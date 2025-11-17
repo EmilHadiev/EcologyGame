@@ -74,4 +74,6 @@ public class SoundContainer : MonoBehaviour, ISoundContainer
 
         _source.PlayOneShot(_currentClip, VolumeScale);
     }
+
+    public void MuteToggle(bool isOn) => _source.mute = isOn;
 }
