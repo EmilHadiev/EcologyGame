@@ -33,12 +33,15 @@ public class PrepareState : Menu
         _cts?.Cancel();
         _cts = new CancellationTokenSource();
         await UniTask.Delay(Delay, cancellationToken: _cts.Token);
-        OpenSelectAnswer();
+        TryOpenSelectAnswer();
     }
 
-    private void OpenSelectAnswer()
+    private void TryOpenSelectAnswer()
     {
-        _menuStateMachine.SwitchState<SelectAnswerState>();
+        if (_selector.IsAnswersCompleted() == false)
+            _menuStateMachine.SwitchState<SelectAnswerState>();
+        else
+            _menuStateMachine.SwitchState<ResultState>();
     }
 
     private void OnDestroy()

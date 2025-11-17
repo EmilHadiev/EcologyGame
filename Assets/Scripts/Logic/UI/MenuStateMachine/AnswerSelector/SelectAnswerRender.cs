@@ -14,14 +14,16 @@ public class SelectAnswerRender : MonoBehaviour
 
     private IQuestionSelector _questionSelector;
     private IMenuStateMachine _stateMachine;
+    private ISoundContainer _soundContainer;
 
     private int _countQuestions;
 
     [Inject]
-    private void Constructor(IQuestionSelector selector, IMenuStateMachine stateMachine)
+    private void Constructor(IQuestionSelector selector, IMenuStateMachine stateMachine, ISoundContainer soundContainer)
     {
         _questionSelector = selector;
         _stateMachine = stateMachine;
+        _soundContainer = soundContainer;
     }
 
     private const int MaxAnswers = 4;
@@ -56,7 +58,7 @@ public class SelectAnswerRender : MonoBehaviour
         var selector = shuffler.Shuffle(_questionSelector.GetQuestion().QuestVersions).ToArray();
 
         for (int i = 0; i < selector.Length; i++)
-            _selectors[i].SetQuestion(selector[i], _questionSelector);
+            _selectors[i].SetQuestion(selector[i], _questionSelector, _soundContainer);
 
         ShowCountQuestions(_questionSelector.CurrentAnswerNumber, _questionSelector.MaxQuestions);
     }

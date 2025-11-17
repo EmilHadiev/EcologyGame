@@ -1,0 +1,74 @@
+using System;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
+
+public class ResultState : Menu
+{
+    [SerializeField] private TMP_Text _countAnswersText;
+    [SerializeField] private Button _restartButton;
+    [SerializeField] private TMP_Text _answerResultText;
+
+    private IQuestionSelector _selector;
+    private IPointsContainer _pointsContainer;
+    private IMenuStateMachine _menuStateMachine;
+
+    private void OnEnable()
+    {
+        _restartButton.onClick.AddListener(StartNextQuestions);
+    }
+
+    private void OnDisable()
+    {
+        _restartButton.onClick.RemoveListener(StartNextQuestions);
+    }
+
+    [Inject]
+    private void Constructor(IQuestionSelector selector, IPointsContainer pointsContainer, IMenuStateMachine menuStateMachine)
+    {
+        _selector = selector;
+        _pointsContainer = pointsContainer;
+        _menuStateMachine = menuStateMachine;
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+        ShowResult();
+        ResetQuestions();
+    }
+
+    private void ResetQuestions()
+    {
+        _selector.Reset();
+    }
+
+    private void ShowResult()
+    {
+        _countAnswersText.text = $"{_pointsContainer.Points}/{_selector.MaxQuestions}";
+        _answerResultText.text = GetResultText();
+    }
+
+    private string GetResultText()
+    {
+        int points = _pointsContainer.Points;
+        int maxPoints = _selector.MaxQuestions;
+
+        if (points >= maxPoints)
+            return "Отлично!";
+        else if (maxPoints - 3 == maxPoints)
+            return "Молодец!";
+        else if (maxPoints - 6 == maxPoints)
+            return "Хорошо!";
+        else if (maxPoints - 9 == maxPoints)
+            return "Неплохо!";
+        else
+            return "Старайся лучше!";
+    }
+
+    private void StartNextQuestions()
+    {
+        _menuStateMachine.SwitchState<PrepareState>();
+    }
+}

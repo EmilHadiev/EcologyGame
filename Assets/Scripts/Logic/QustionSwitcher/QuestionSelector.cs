@@ -24,14 +24,15 @@ public class QuestionSelector : IInitializable, IQuestionSelector
 
     public Question GetQuestion()
     {
-        if (_index > _questions.Length - 1)
-            _index = 0;
+        if (IsAnswersCompleted())
+            return default;
 
         return _questions[_index];
     }
 
-    public void PrepareNextQuestion()
-    {
-        _index++;
-    }
+    public void PrepareNextQuestion() => _index++;
+
+    public void Reset() => _index = 0;
+
+    public bool IsAnswersCompleted() => _index + 1 >= _questions.Length;
 }
