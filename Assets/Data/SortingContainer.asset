@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2efd0fdca6020234fb330eba62bab37b, type: 3}
+  m_Name: SortingContainer
+  m_EditorClassIdentifier: 
+  _data:
+  - Type: 0
+    Name: "\u0413\u0430\u0437\u0435\u0442\u0430"
+    Sprite: {fileID: 21300000, guid: 0395418af9b3c5143a7b1bf079809daf, type: 3}
+  - Type: 0
+    Name: "\u0416\u0443\u0440\u043D\u0430\u043B"
+    Sprite: {fileID: 21300000, guid: 2de3ebec15326b0409afd1325c55f32b, type: 3}
+  - Type: 0
+    Name: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430"
+    Sprite: {fileID: 21300000, guid: 08e2ade7bc307cb49a14caa2bdd5637a, type: 3}
+  - Type: 1
+    Name: "\u0411\u0443\u0442\u044B\u043B\u043A\u0430"
+    Sprite: {fileID: 21300000, guid: fcdaef2887e7a4d43aa67914d5ff58c8, type: 3}
+  - Type: 1
+    Name: "\u041A\u043E\u043D\u0441\u0435\u0440\u0432\u0430"
+    Sprite: {fileID: 21300000, guid: 8f31ee48d2d1b7d4aa7cec3450cac966, type: 3}
+  - Type: 1
+    Name: "\u0424\u043E\u043B\u044C\u0433\u0430"
+    Sprite: {fileID: 21300000, guid: 0f30e2fb842a3fc4aa3682f77b302d11, type: 3}
+  - Type: 2
+    Name: "\u0426\u0432\u0435\u0442\u044B"
+    Sprite: {fileID: 21300000, guid: 0fcfd741e1d6425478bce122a907f084, type: 3}
+  - Type: 2
+    Name: "\u0424\u0440\u0443\u043A\u0442\u044B"
+    Sprite: {fileID: 21300000, guid: bbf866f294d245448b3f7a89d2a142ca, type: 3}
+  - Type: 2
+    Name: "\u041A\u043E\u0441\u0442\u0438"
+    Sprite: {fileID: 21300000, guid: 9741e0d3c5ce56f4c8ff331434d1ebe5, type: 3}

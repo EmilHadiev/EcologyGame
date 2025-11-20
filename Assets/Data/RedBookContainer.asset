@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618145b4b0b147f4b9c837dba17c64e4, type: 3}
+  m_Name: RedBookContainer
+  m_EditorClassIdentifier: 
+  _redBooks:
+  - IsCorrect: 1
+    Sprite: {fileID: 21300000, guid: cc7aeb24d7360c94f8373e181f4889c3, type: 3}
+    Name: "\u0410\u043C\u0443\u0440\u0441\u043A\u0438\u0439 \u0442\u0438\u0433\u0440"
+  - IsCorrect: 1
+    Sprite: {fileID: 21300000, guid: 3e97c972ca054714f9148fb26abd82cd, type: 3}
+    Name: "\u041C\u0430\u043D\u0443\u043B"
+  - IsCorrect: 1
+    Sprite: {fileID: 21300000, guid: 08de05491da593749b13f3d3498d2d83, type: 3}
+    Name: "\u0420\u043E\u0437\u043E\u0432\u044B\u0439 \u043F\u0435\u043B\u0438\u043A\u0430\u043D"
+  - IsCorrect: 1
+    Sprite: {fileID: 21300000, guid: 3b0bf62082e522c46a9369faf5b350fd, type: 3}
+    Name: "\u0427\u0435\u0440\u043D\u044B\u0439 \u0430\u0438\u0441\u0442"
+  - IsCorrect: 0
+    Sprite: {fileID: 21300000, guid: 2890f6f1e3cffd846b4e1297b37552e0, type: 3}
+    Name: "\u0412\u043E\u043B\u043A"
+  - IsCorrect: 0
+    Sprite: {fileID: 21300000, guid: 816090e3e92fcea4dba3745e474ac4fd, type: 3}
+    Name: "\u0411\u0443\u0440\u0443\u043D\u0434\u0443\u043A"
+  - IsCorrect: 0
+    Sprite: {fileID: 21300000, guid: f3a5261bdadc8c44491c836e64e96abd, type: 3}
+    Name: "\u0411\u043E\u0431\u0435\u0440"
+  - IsCorrect: 0
+    Sprite: {fileID: 21300000, guid: 21e71b91ebcd5d74ba1fc8eae6c5e7d6, type: 3}
+    Name: "\u041A\u0430\u043F\u0443\u0441\u0442\u043D\u0438\u0446\u0430"
+  - IsCorrect: 0
+    Sprite: {fileID: 21300000, guid: 2a9dc1c0bc67c2341a61faf7031a2dd2, type: 3}
+    Name: "\u041A\u043E\u0448\u043A\u0430"
+  - IsCorrect: 0
+    Sprite: {fileID: 21300000, guid: 5f1913ee6ab8b0247933acb4fedaee4f, type: 3}
+    Name: "\u041A\u0443\u043A\u0443\u0448\u043A\u0430"

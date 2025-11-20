@@ -9,6 +9,8 @@ public class ResultState : Menu
     [SerializeField] private Button _restartButton;
     [SerializeField] private TMP_Text _answerResultText;
 
+    private const int CountOfMiniGames = 3;
+
     private IQuestionSelector _selector;
     private IPointsContainer _pointsContainer;
     private IMenuStateMachine _menuStateMachine;
@@ -57,16 +59,16 @@ public class ResultState : Menu
 
     private string GetResultText()
     {
-        int points = _pointsContainer.Points;
-        int maxPoints = _selector.MaxQuestions;
+        int points = GetCorrectPoints();
+        int maxPoints = _selector.MaxQuestions + CountOfMiniGames;
 
         if (points >= maxPoints)
             return "Отлично!";
-        else if (maxPoints - 3 <= maxPoints)
+        else if (points >= maxPoints - 3)
             return "Молодец!";
-        else if (maxPoints - 6 <= maxPoints)
+        else if (points >= maxPoints - 6)
             return "Хорошо!";
-        else if (maxPoints - 9 <= maxPoints)
+        else if (points >= maxPoints - 9)
             return "Неплохо!";
         else
             return "Старайся лучше!";
