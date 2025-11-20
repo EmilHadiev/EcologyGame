@@ -1,4 +1,6 @@
+using Cysharp.Threading.Tasks;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -10,10 +12,17 @@ public class SortingGameRender : MonoBehaviour
     [SerializeField] private SortingContainer[] _containers;
     [SerializeField] private SortingElementList _startContainer;
 
+    private const int LongDelay = 15000;
+    private const int ShortDelay = 3000;
+
     private ISoundContainer _soundContainer;
     private IPointsContainer _pointsContainer;
     private IMenuStateMachine _menuStateMachine;
     private SortingElementContainer _container;
+
+    private bool _isChecked = false;
+
+    private CancellationTokenSource _cts;
 
     private void OnValidate()
     {
@@ -37,6 +46,12 @@ public class SortingGameRender : MonoBehaviour
     private void Awake()
     {
         CreateTemplates();
+    }
+
+    private void OnDestroy()
+    {
+        _cts?.Cancel();
+        _cts?.Dispose();
     }
 
     private void CreateTemplates()
@@ -64,17 +79,56 @@ public class SortingGameRender : MonoBehaviour
 
     private void CheckResult()
     {
+        if (_isChecked)
+            return;
+
+        _isChecked = true;
+
+        bool _isWrongAnswerPresent = TryGetWrongAnswer();
+
+        Debug.Log(_isWrongAnswerPresent);
+
+        if (_isWrongAnswerPresent)
+        {
+            TrySetCorrectColors();
+            _soundContainer.Play(SoundsName.WrongAnswer);
+            SwitchState(LongDelay).Forget();
+        }
+        else
+        {
+            _soundContainer.Play(SoundsName.CorrectAnswer);
+            _pointsContainer.AddPoints();
+            SwitchState(ShortDelay).Forget();
+        }  
+    }
+
+    private async UniTaskVoid SwitchState(int delay)
+    {
+        _cts?.Cancel();
+        _cts = new CancellationTokenSource();
+
+        await UniTask.Delay(delay, cancellationToken: _cts.Token);
+        _menuStateMachine.SwitchState<PrepareState>();
+    }
+
+    private bool TryGetWrongAnswer()
+    {
         for (int i = 0; i < _containers.Length; i++)
         {
             if (_containers[i].IsFilledCorrectly() == false)
             {
-                _soundContainer.Play(SoundsName.WrongAnswer);
-                return;
+                return true;
             }
         }
 
-        _soundContainer.Play(SoundsName.CorrectAnswer);
-        _pointsContainer.AddPoints();
-        _menuStateMachine.SwitchState<PrepareState>();
+        return false;
+    }
+    
+    private void TrySetCorrectColors()
+    {
+        for (int i = 0; i < _containers.Length; i++)
+        {
+            _containers[i].TrySetCorrectColor();
+        }
     }
 }

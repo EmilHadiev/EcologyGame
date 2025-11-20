@@ -3,7 +3,7 @@ using Zenject;
 
 public abstract class AnswerResultState : Menu
 {
-    private const int Delay = 2000;
+    private const int Delay = 4000;
 
     protected ISoundContainer SoundContainer;
     private IMenuStateMachine _stateMachine;

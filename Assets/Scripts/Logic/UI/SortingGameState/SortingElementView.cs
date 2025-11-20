@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,6 +9,7 @@ public class SortingElementView : MonoBehaviour, IBeginDragHandler, IDragHandler
     [field: SerializeField] public SortingElementType Type { get; private set; }
     [SerializeField] private Image _elementImage;
     [SerializeField] private TMP_Text _elementName;
+    [SerializeField] private Color[] _colors;
 
     private Transform _previousParent;
     private Canvas _parentCanvas;
@@ -80,5 +82,11 @@ public class SortingElementView : MonoBehaviour, IBeginDragHandler, IDragHandler
     private IElementPickable GetContainer(PointerEventData eventData)
     {
         return EventSystem.current.GetFirstComponentUnderPointer<IElementPickable>(eventData);
+    }
+
+    public void TrySetCorrectColor()
+    {
+        _elementName.color = Color.red;
+        _elementName.text = $"<S>{_elementName.text}";
     }
 }

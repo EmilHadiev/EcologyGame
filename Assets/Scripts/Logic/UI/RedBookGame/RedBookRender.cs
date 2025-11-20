@@ -12,6 +12,9 @@ public class RedBookRender : MonoBehaviour
     [SerializeField] private Transform _container;
     [SerializeField] private Button _checkButton;
 
+    private const int LongDelay = 15000;
+    private const int ShortDelay = 3000;
+
     private RedBookContainer _redBook;
     private IPointsContainer _points;
     private ISoundContainer _sound;
@@ -72,14 +75,16 @@ public class RedBookRender : MonoBehaviour
         {
             _sound.Play(SoundsName.CorrectAnswer);
             _points.AddPoints();
+            NextState(ShortDelay).Forget();
         }
         else
         {
             _sound.Play(SoundsName.WrongAnswer);
+            NextState(LongDelay).Forget();
         }
 
         TryShowCorrectAnswer();
-        NextState().Forget();
+        
     }
 
     private bool IsCorrect()
@@ -91,9 +96,12 @@ public class RedBookRender : MonoBehaviour
         {
             if (_views[i].IsRightChoice)
                 selected++;
+
+            if (_views[i].IsSelected && _views[i].IsRightChoice == false)
+                return false;
         }
 
-        return countCorrect == selected; ;
+        return countCorrect == selected;
     }
 
     private void TryShowCorrectAnswer()
@@ -102,9 +110,9 @@ public class RedBookRender : MonoBehaviour
             _views[i].TryShowCorrectView();
     }
 
-    private async UniTaskVoid NextState()
+    private async UniTaskVoid NextState(int delay)
     {
-        await UniTask.Delay(2500);
+        await UniTask.Delay(delay);
         _menuStateMachine.SwitchState<PrepareState>();
     }
 }

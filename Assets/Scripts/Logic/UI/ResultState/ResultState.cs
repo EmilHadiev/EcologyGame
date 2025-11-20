@@ -9,7 +9,7 @@ public class ResultState : Menu
     [SerializeField] private Button _restartButton;
     [SerializeField] private TMP_Text _answerResultText;
 
-    private const int CountOfMiniGames = 3;
+    private const int CountOfMiniGames = 2;
 
     private IQuestionSelector _selector;
     private IPointsContainer _pointsContainer;
@@ -47,7 +47,7 @@ public class ResultState : Menu
 
     private void ShowResult()
     {
-        _countAnswersText.text = $"{GetCorrectPoints()}/{_selector.MaxQuestions}";
+        _countAnswersText.text = $"{GetCorrectPoints()}/{GetMaxPoints()}";
         _answerResultText.text = GetResultText();
     }
 
@@ -60,7 +60,7 @@ public class ResultState : Menu
     private string GetResultText()
     {
         int points = GetCorrectPoints();
-        int maxPoints = _selector.MaxQuestions + CountOfMiniGames;
+        int maxPoints = GetMaxPoints();
 
         if (points >= maxPoints)
             return "Отлично!";
@@ -72,6 +72,11 @@ public class ResultState : Menu
             return "Неплохо!";
         else
             return "Старайся лучше!";
+    }
+
+    private int GetMaxPoints()
+    {
+        return _selector.MaxQuestions + CountOfMiniGames;
     }
 
     private void StartNextQuestions()

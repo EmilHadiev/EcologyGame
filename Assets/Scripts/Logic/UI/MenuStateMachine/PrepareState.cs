@@ -11,6 +11,7 @@ public class PrepareState : Menu
 
     private const int Delay = 1500;
     private const int RedBookGameIndex = 5;
+    private const int SortingGameIndex = 15;
 
     [Inject] private IMenuStateMachine _menuStateMachine;
     [Inject] private IQuestionSelector _selector;
@@ -20,6 +21,7 @@ public class PrepareState : Menu
     private const string MiniGame = "Мини-игра";
 
     private bool _isRedBookGameComplete = false;
+    private bool _isSortingGameComplete = false;
 
     private int CurrentAnswerNumber => _selector.CurrentAnswerNumber;
 
@@ -32,7 +34,8 @@ public class PrepareState : Menu
 
     private void TryShowAnswerNumber()
     {
-        if (IsMiniGameState(RedBookGameIndex, _isRedBookGameComplete))
+        if (IsMiniGameState(RedBookGameIndex, _isRedBookGameComplete) 
+            && IsMiniGameState(SortingGameIndex, _isSortingGameComplete))
             _prepareText.text = MiniGame;
         else
             _prepareText.text = $"{Question} {CurrentAnswerNumber}";
@@ -52,7 +55,12 @@ public class PrepareState : Menu
             () => _menuStateMachine.SwitchState<RedBookGameState>(),
             ref _isRedBookGameComplete))
             return;
-            
+
+        if (IsMiniGameState(SortingGameIndex,
+            () => _menuStateMachine.SwitchState<SortingGameState>(),
+            ref _isSortingGameComplete))
+            return;
+
         if (_selector.IsAnswersCompleted() == false)
             _menuStateMachine.SwitchState<SelectAnswerState>();
         else

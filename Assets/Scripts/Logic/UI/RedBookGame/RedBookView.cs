@@ -8,6 +8,7 @@ public class RedBookView : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image _background;
     [SerializeField] private Image _animalImage;
     [SerializeField] private TMP_Text _animalNameText;
+    [SerializeField] private Image _wrongImage;
 
     public bool IsSelected { get; private set; }
 
@@ -53,10 +54,12 @@ public class RedBookView : MonoBehaviour, IPointerClickHandler
         else if (IsCorrect == false && IsSelected == false)
         {
             _background.color = Color.red;
+            _wrongImage.enabled = true;
         }
         else if (IsRightChoice == false)
         {
             _background.color = Color.red;
+            _wrongImage.enabled = true;
         }
     }
 }
