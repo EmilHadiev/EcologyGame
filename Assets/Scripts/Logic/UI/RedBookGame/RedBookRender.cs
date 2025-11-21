@@ -1,4 +1,4 @@
-using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ public class RedBookRender : MonoBehaviour
     [SerializeField] private RedBookView _template;
     [SerializeField] private Transform _container;
     [SerializeField] private Button _checkButton;
+    [SerializeField] private Button _continueButton;
 
-    private const int LongDelay = 15000;
-    private const int ShortDelay = 3000;
+    private const int Delay = 1;
 
     private RedBookContainer _redBook;
     private IPointsContainer _points;
@@ -30,11 +30,13 @@ public class RedBookRender : MonoBehaviour
     private void OnEnable()
     {
         _checkButton.onClick.AddListener(CheckResult);
+        _continueButton.onClick.AddListener(SwitchState);
     }
 
     private void OnDisable()
     {
         _checkButton.onClick.RemoveListener(CheckResult);
+        _continueButton.onClick.RemoveListener(SwitchState);
     }
 
     [Inject]
@@ -75,16 +77,16 @@ public class RedBookRender : MonoBehaviour
         {
             _sound.Play(SoundsName.CorrectAnswer);
             _points.AddPoints();
-            NextState(ShortDelay).Forget();
         }
         else
         {
             _sound.Play(SoundsName.WrongAnswer);
-            NextState(LongDelay).Forget();
         }
 
         TryShowCorrectAnswer();
-        
+
+        _checkButton.gameObject.SetActive(false);
+        PerformButtonAnimation();
     }
 
     private bool IsCorrect()
@@ -110,9 +112,15 @@ public class RedBookRender : MonoBehaviour
             _views[i].TryShowCorrectView();
     }
 
-    private async UniTaskVoid NextState(int delay)
+    private void SwitchState()
     {
-        await UniTask.Delay(delay);
         _menuStateMachine.SwitchState<PrepareState>();
+    }
+
+    private void PerformButtonAnimation()
+    {
+        var scale = _continueButton.transform.localScale;
+        float multiplier = 1.25f;
+        _continueButton.transform.DOScale(scale * multiplier, Delay).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
     }
 }

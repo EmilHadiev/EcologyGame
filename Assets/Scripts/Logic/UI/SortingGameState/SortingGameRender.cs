@@ -1,4 +1,4 @@
-using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using System.Linq;
 using System.Threading;
 using UnityEngine;
@@ -9,11 +9,11 @@ public class SortingGameRender : MonoBehaviour
 {
     [SerializeField] private SortingElementView _template;
     [SerializeField] private Button _checkButton;
+    [SerializeField] private Button _continueButton;
     [SerializeField] private SortingContainer[] _containers;
     [SerializeField] private SortingElementList _startContainer;
 
-    private const int LongDelay = 15000;
-    private const int ShortDelay = 3000;
+    private const int Delay = 1;
 
     private ISoundContainer _soundContainer;
     private IPointsContainer _pointsContainer;
@@ -30,17 +30,18 @@ public class SortingGameRender : MonoBehaviour
 
         if (_containers.Length == 0)
             _containers = GetComponentsInChildren<SortingContainer>();
-
     }
 
     private void OnEnable()
     {
         _checkButton.onClick.AddListener(CheckResult);
+        _continueButton.onClick.AddListener(SwitchState);
     }
 
     private void OnDisable()
     {
         _checkButton.onClick.RemoveListener(CheckResult);
+        _continueButton.onClick.RemoveListener(SwitchState);
     }
 
     private void Awake()
@@ -86,29 +87,31 @@ public class SortingGameRender : MonoBehaviour
 
         bool _isWrongAnswerPresent = TryGetWrongAnswer();
 
-        Debug.Log(_isWrongAnswerPresent);
-
         if (_isWrongAnswerPresent)
         {
             TrySetCorrectColors();
             _soundContainer.Play(SoundsName.WrongAnswer);
-            SwitchState(LongDelay).Forget();
         }
         else
         {
             _soundContainer.Play(SoundsName.CorrectAnswer);
             _pointsContainer.AddPoints();
-            SwitchState(ShortDelay).Forget();
-        }  
+        }
+
+        _checkButton.gameObject.SetActive(false);
+        PerformButtonAnimation();
     }
 
-    private async UniTaskVoid SwitchState(int delay)
+    private void SwitchState()
     {
-        _cts?.Cancel();
-        _cts = new CancellationTokenSource();
-
-        await UniTask.Delay(delay, cancellationToken: _cts.Token);
         _menuStateMachine.SwitchState<PrepareState>();
+    }
+
+    private void PerformButtonAnimation()
+    {
+        var scale = _continueButton.transform.localScale;
+        float multiplier = 1.1f;
+        _continueButton.transform.DOScale(scale * multiplier, Delay).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
     }
 
     private bool TryGetWrongAnswer()
